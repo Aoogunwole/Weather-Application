@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+
+  
+  <style>
+    #btn {
+      position: absolute;
+      top: 2.75rem;
+      right: 12%;
+      border-radius: 5px;
+    }
+    .name {
+      color: black;
+      font-family:cursive;
+    }
+      .animated-text {
+      position: relative;
+      display: inline-block;
+    }
+
+    .animated-text::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .animated-text:hover::after {
+      transform: scaleX(1);
+    }
+    footer {
+      
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  </style>
+  <title>Weather Application</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="text-center bg-light">
+      <h1 class="name animated-text" > MY WEATHER APPLICATION</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+        <input type="text" id="search" class="form-control" placeholder="Enter a city name">
+        <button id="btn" class="btn bg-white mt-1"><box-icon name='search-alt-2'></box-icon>Search</button>
+        <h1 id="w-location"></h1>
+        <h3 class="text-dark" id="w-desc"></h3>
+        <h3 id="w-string"></h3>
+        <img id="w-icon">
+        <ul id="w-details" class="list-group mt-3">
+          <li class="list-group-item" id="w-dewpoint"></li>
+          <li class="list-group-item" id="w-humidity"></li>
+          <li class="list-group-item" id="w-feels-like"></li>
+          <li class="list-group-item" id="w-wind"></li>
+        </ul>
+        <hr>
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#locModal">
+            Change Location
+          </button> -->
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+  <footer class="mt-5 p-3 text-center bg-light">
+    Weather Application &copy; <b>Developed by Abraham</b>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <script src="storage.js"></script>
+  <script src="weather.js"></script>
+  <script src="ui.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
